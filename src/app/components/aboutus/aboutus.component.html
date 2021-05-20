@@ -1,0 +1,38 @@
+<section class="py-5">
+  <h2 class="h1-responsive font-weight-bold text-center my-4">About us</h2>
+  <p class="text-center w-responsive mx-auto mb-1" [ngStyle]="{'font-family': style}" >This site does not provide electronic versions of films, but only collects and catalogs resources used on other sites and is published by users.
+  </p>
+</section>
+<section class="py-5">
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+  <p class="text-center w-responsive mx-auto mb-5"[ngStyle]="{'font-family': style}">You have questions? Feel free to contact us directly. Our team will come back to you within a few hours to help you.<br><br><br><br><br><br><br><br><br></p>
+</section>
+<div class="album bg-light">
+  <div class="container">
+    <button (click)="Destroy()" type="submit" class="btn btn-outline-light-blue accent-3 container ">Enter to contact us</button>
+  <form action="https://formspree.io/f/xwkwvjod" method="post" *ngIf=" a == true">
+  <div class="form-group form-group green-border-focus">
+    <label class="col-sm-2 col-form-label">Name:</label>
+    <div class="col-sm-10">
+      <input type="" class="form-control" id="">
+    </div>
+    <label  class="col-sm-2 col-form-label" >Email:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" name="From">
+    </div>
+<!--    <div class="col-sm-10">-->
+<!--      <textarea name="Message"></textarea>-->
+<!--    </div>-->
+    <div class="form-group ml-3">
+      <label for="exampleFormControlTextarea1" >Message:</label>
+      <textarea class="form-control" name="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </div>
+  <div class=" row">
+    <div class="ml-4">
+      <button type="submit" class="btn btn-outline-light-blue accent-3 mb-2">Send</button>
+    </div>
+  </div>
+</form>
+  </div>
+</div>

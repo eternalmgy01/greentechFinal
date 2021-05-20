@@ -1,0 +1,26 @@
+<div class="album py-5 bg-light mt-5">
+<div class="container">
+  <p class="h1-responsive font-weight-bold text-center mb-5">Time {{today | date:'h:mm: a zzzz'}}</p>
+
+  <ul class="list-unstyled">
+    <li class="media mb-5">
+      <img class="d-flex mr-3" src="https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/b46379e3-7e04-413b-88e0-34013a95b18a/300x450" alt="Generic placeholder image" style="width: 300px">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1 font-weight-bold container">Werewolf</h5>
+        The protagonist of the fantasy thriller "Werewolf" is Lieutenant Artemis and her small unit of soldiers from the future. Once, during a planned interplanetary flight, the heroine, together with her charges, overcomes a time loop and finds herself in a parallel reality. This wonderful world is dangerous and scary, it is literally teeming with all kinds of monsters.Despite the battle hardening and tremendous experience in getting out of confusing situations, the heroes have a hard time. They barely manage to survive, let alone deal with the enemy and return home. Only a certain Hunter can save the lieutenant from terrible creatures, but who he is, and how to find him, no one knows. Will Artemis and her charges be able to contact the mysterious stranger and save their lives by returning to their home reality?
+        <br><br><br><br><br><br><b><b>Days remaining: {{daysremain | days}}</b></b>
+      </div>
+    </li>
+  </ul>
+
+  <ul class="list-unstyled">
+  <li class="media mb-5" *ngFor="let item of newsitems">
+    <img class="d-flex mr-3" src={{item.imgsrc}} alt="Generic placeholder image" style="width: 300px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1 font-weight-bold container">{{item.name}}</h5>
+      {{item.desc}}
+    </div>
+  </li>
+</ul>
+</div>
+</div>

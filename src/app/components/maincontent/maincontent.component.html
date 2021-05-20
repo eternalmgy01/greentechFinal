@@ -1,0 +1,33 @@
+<div class="album py-5 bg-light mt-5">
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-4" *ngFor="let item of items">
+        <div class="card mb-4 shadow-sm">
+          <div class="card text-white blue-gradient" style="max-width: 22rem;">
+            <div class="card-header">{{item.name}}</div>
+          </div>
+          <img src={{item.imgsrc}} alt="..." width="200" height="50" class="img-thumbnail" style="width: 100%">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a routerLink="/viewmovie/{{item.id}}">
+                <button type="button" class="btn btn-sm btn-outline-light-blue accent-3">Watch</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+<!--    <form (submit)="addComment(comment.value)" *ngIf=" a == false">-->
+<!--    <div class="form-group green-border-focus">-->
+<!--      <label for="comment">Ваши коментарии:</label>-->
+<!--      <input class="form-control form-control-lg" id="comment" type="text" placeholder="Comment:" #comment>-->
+<!--      <button type="submit" class="btn btn-outline-light-blue accent-3 mb-2">Submit</button>-->
+<!--      <app-coments [comments]="comment" *ngFor="let comment of comments"></app-coments>-->
+<!--    </div>-->
+<!--    </form>-->
+<!--    <button (click)="Destroy()" type="submit" class="btn btn-outline-light-blue accent-3 mb-2">Destroy</button> <button (click)="View()" type="submit" class="btn btn-outline-light-blue accent-3 mb-2">View</button>-->
+
+</div>
+</div>

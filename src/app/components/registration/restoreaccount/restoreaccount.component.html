@@ -1,0 +1,31 @@
+<div class="album py-5 bg-light mt-5 mb-5">
+  <div class="container">
+
+<div class="card">
+
+  <h5 class="card-header info-color white-text text-center py-4">
+    <strong>Recover account</strong>
+  </h5>
+
+  <div class="card-body px-lg-5">
+
+
+    <form class="text-center" style="color: #757575;" action="#!">
+      <p>We will send a link to your mail, using this link you can restore your account</p>
+
+      <div class="md-form">
+        <input type="email" id="materialLoginFormEmail" class="form-control" placeholder="Почта" name="email" ngModel required #email="ngModel" email>
+        <span *ngIf="email.invalid && email.touched" class="error">Email is important!</span>
+      </div>
+
+
+      <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Send</button>
+
+    </form>
+
+
+  </div>
+
+</div>
+  </div>
+</div>

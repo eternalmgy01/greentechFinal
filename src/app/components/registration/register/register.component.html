@@ -1,0 +1,93 @@
+<div class="album py-5 bg-light mt-5">
+  <div class="container">
+
+
+<div class="card">
+
+  <h5 class="card-header info-color white-text text-center py-4">
+    <strong>Registration</strong>
+  </h5>
+
+
+  <div class="card-body px-lg-5 pt-0">
+
+
+    <form #newForm="ngForm" class="text-center" style="color: #757575;" action="#!">
+
+      <div class="form-row">
+        <div class="col">
+
+          <div class="md-form">
+            <input type="email" id="name" class="form-control" placeholder="Name" name="name" ngModel required minlength="3" #name="ngModel" name>
+            <span *ngIf="name.invalid && name.touched" class="error">At least 3 characters!</span>
+<!--            <label for="materialRegisterFormFirstName">Имя</label>-->
+          </div>
+        </div>
+        <div class="col">
+
+          <div class="md-form">
+            <input type="text" name="lastname" id="materialRegisterFormLastName" class="form-control" placeholder="Surname" ngModel #lastname="ngModel" required minlength="3" lastname>
+            <span *ngIf="lastname.invalid && lastname.touched" class="error">At least 3 characters!</span>
+            <!--            <label for="materialRegisterFormLastName">Фамилия</label>-->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="md-form mt-0">
+        <input type="email" id="materialLoginFormEmail" class="form-control" placeholder="email" name="email" ngModel required #email="ngModel" email>
+        <span *ngIf="email.invalid && email.touched" class="error">Email is important!</span>
+<!--        <label for="materialRegisterFormEmail">Почта</label>-->
+      </div>
+
+
+      <div class="md-form">
+        <input type="password" id="materialRegisterFormPassword" placeholder="Password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" name="password" ngModel required #password="ngModel" password>
+<!--        <label for="materialRegisterFormPassword">Пароль</label>-->
+        <span *ngIf="password.invalid && password.touched" class="error">Minimum 8 characters</span>
+        <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          Minimum 8 characters and 1 digit
+        </small>
+      </div>
+
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="materialRegisterFormNewsletter">
+        <label class="form-check-label" for="materialRegisterFormNewsletter">Subscribe to our newsletter</label>
+      </div>
+
+
+      <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">registration</button>
+
+
+      <p>log in with:</p>
+
+      <a type="button" class="btn-floating btn-fb btn-sm">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a type="button" class="btn-floating btn-tw btn-sm">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a type="button" class="btn-floating btn-li btn-sm">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a type="button" class="btn-floating btn-git btn-sm">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <hr>
+
+
+      <p><em>Be registering</em>
+        you agree with
+        <a href="" target="_blank">Terms of Service</a>
+
+    </form>
+
+
+  </div>
+
+</div>
+
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="album py-5 bg-light mt-5">
+  <div class="container">
+    <ul class="list-unstyled">
+      <li class="media mb-5">
+        <img class="d-flex mr-3" src={{animes.imgSrc}} alt="Generic placeholder image" style="width: 300px">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1 font-weight-bold container">{{animes.title}}</h5>
+          <table class="table table-sm">
+            <tbody>
+            <tr>
+              <th scope="row">Released:</th>
+              <td>{{animes.year}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Genre:</th>
+              <td>{{animes.genres}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Country:</th>
+              <td>{{animes.country}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Cast:</th>
+              <td>Meliodas,Diane,Ban,King,Gowther,Merlin,Escanor,Elizabeth</td>
+            </tr>
+            <tr>
+              <th scope="row">Time:</th>
+              <td>{{animes.time}} min </td>
+            </tr>
+            <tr>
+              <th scope="row">Translate:</th>
+              <td>Dubbed | Clear sound</td>
+            </tr>
+            <tr>
+              <th scope="row">Quality:</th>
+              <td>HDRip</td>
+            </tr>
+            <table class="table table-sm">
+              <tbody>
+            <tr>
+            <th scope="row"><button (click)="increment()" class="btn btn-sm btn-outline-light-blue accent-3">Like</button></th>
+              <td><app-likes  [myNewnumber] = "counter"></app-likes></td>
+              <td><i class="far fa-heart red-text"></i></td>
+            </tr>
+              </tbody>
+            </table>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ul>
+    <hr class="light-blue">
+    <div class="text-center">
+<!--      <p>The story takes place in a time when humans and non-humans alike lived in the same society. The Kingdom of Liones was almost annihilated thanks to the evildoings of the Demon Clan, but were saved thanks to the efforts of the Kingdom’s third Princess, Elizabeth, and a band of strong yet terrible knights known as The Seven Deadly Sins. With peace returning to the Kingdom of Liones following its near annihilation by the Demon Race, Elizabeth and The Seven Deadly Sins decide to celebrate the King’s birthday with numerous dishes being prepared in the Boar Hat tavern. The Deadly Sins' leader Meliodas and his talking pig companion Hawk search for Skyfish for a recipe, ending up above the clouds and in front of the Sky Palace after stumbling across a well in the nearby forest which they discover is a portal....</p>-->
+          <p>{{animes.description}}</p>
+    </div>
+    <hr class="light-blue">
+    <div class="embed-responsive embed-responsive-21by9">
+      <iframe class="embed-responsive-item" src="//5678.videocdn.ca/HLA920uJKFMg/movie/2500" allowfullscreen></iframe>
+    </div>
+
+    <div class="text-center mt-3" >
+      <p>Leave a review about the movie</p>
+    </div>
+    <form #newForm="ngForm" (submit)="addReview(newname.value, newreview.value)">
+      <div class="form-group green-border-focus">
+        <label>Your name:</label>
+        <input class="form-control form-control-lg" id="name" type="text" #newname name="name">
+        <div class="form-group green-border-focus">
+          <label>Your review:</label>
+          <input class="form-control form-control-lg" id="review" type="text" #newreview>
+          <button type="submit" class="btn btn-outline-light-blue accent-3 mb-2">Send</button>
+        </div>
+      </div>
+    </form>
+    <ul class="list-group">
+      <li *ngFor="let info of reviews" class="list-group-item"><h6>Name: <b>{{info.name}}</b></h6>
+      Отзыв: {{info.review}}</li>
+    </ul>
+  </div>
+</div>
